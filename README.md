@@ -15,6 +15,23 @@ The goal is twofold:
 
 ---
 
+### 📦 Data Optimization (Excel → Parquet Conversion)
+
+The original dataset was provided in **Excel (.xlsx)** format (~500k+ rows).  
+To improve efficiency, it was converted into **Parquet format** for faster processing and reduced file size.
+
+```python
+import pandas as pd
+
+# Load Excel file
+df = pd.read_excel("Online_Retail.xlsx")
+
+# Save as compressed Parquet file
+df.to_parquet("Online_Retail.parquet", engine="pyarrow", compression="snappy")
+
+print("File successfully converted to Parquet!")
+
+```
 ## 🛠️ Methodology
 ### 🔹 Data Preprocessing
 - Removed cancellations, duplicates, missing IDs.
