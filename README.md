@@ -32,6 +32,30 @@ df.to_parquet("Online_Retail.parquet", engine="pyarrow", compression="snappy")
 print("File successfully converted to Parquet!")
 
 ```
+
+
+### 🔄 Converting Parquet Back to Excel/CSV
+
+The dataset was optimized and saved in **Parquet format** for faster ML workflows.  
+However, it can be easily converted back into **Excel (.xlsx)** or **CSV (.csv)** if required:
+
+```python
+import pandas as pd
+
+# Load Parquet file
+df = pd.read_parquet("Online_Retail.parquet", engine="pyarrow")
+
+# Convert to CSV
+df.to_csv("Online_Retail.csv", index=False)
+
+# Convert to Excel
+df.to_excel("Online_Retail.xlsx", index=False)
+
+print("Parquet file successfully converted back to CSV and Excel!")
+
+
+```
+
 ## 🛠️ Methodology
 ### 🔹 Data Preprocessing
 - Removed cancellations, duplicates, missing IDs.
