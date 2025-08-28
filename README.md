@@ -24,10 +24,10 @@ To improve efficiency, it was converted into **Parquet format** for faster proce
 import pandas as pd
 
 # Load Excel file
-df = pd.read_excel("Online_Retail.xlsx")
+df = pd.read_excel("retail.xlsx")
 
 # Save as compressed Parquet file
-df.to_parquet("Online_Retail.parquet", engine="pyarrow", compression="snappy")
+df.to_parquet("retail.parquet", engine="pyarrow", compression="snappy")
 
 print("File successfully converted to Parquet!")
 
@@ -43,13 +43,13 @@ However, it can be easily converted back into **Excel (.xlsx)** or **CSV (.csv)*
 import pandas as pd
 
 # Load Parquet file
-df = pd.read_parquet("Online_Retail.parquet", engine="pyarrow")
+df = pd.read_parquet("retail.parquet", engine="pyarrow")
 
 # Convert to CSV
-df.to_csv("Online_Retail.csv", index=False)
+df.to_csv("retail.csv", index=False)
 
 # Convert to Excel
-df.to_excel("Online_Retail.xlsx", index=False)
+df.to_excel("retail.xlsx", index=False)
 
 print("Parquet file successfully converted back to CSV and Excel!")
 
