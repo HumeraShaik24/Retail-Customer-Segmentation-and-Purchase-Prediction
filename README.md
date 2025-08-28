@@ -114,7 +114,7 @@ print("Parquet file successfully converted back to CSV and Excel!")
 - Delivered actionable insights for targeted marketing and customer retention.
 
 ---
-Made with 💻, 📊, and a passion for data storytelling.
+Made with 💻, 📊, and a passion for data.
 
 
 ## 👩‍💻 About Me
